@@ -7,13 +7,13 @@ branchs:
 before_install:
 - openssl aes-256-cbc -K $encrypted_684ac9f60d62_key -iv $encrypted_684ac9f60d62_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
 - git config --global user.name niuDazhuang
 - git config --global user.email dengwm666@icloud.com
 - sed -i'' "s~git@github.com:${GH_HOME}~https://${GH_TOKEN}:x-oauth-basic@github.com/${GH_HOME}~" _config.yml
 install:
 - npm i
 script:
+- chmod 600 ~/.ssh/id_rsa
 - hexo g -d
 - mv public blog && tar zcvf blog.tar.gz blog
 addons:

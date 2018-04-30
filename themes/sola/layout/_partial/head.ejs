@@ -38,9 +38,9 @@
     <!-- title -->
     <title><%= page.title ? page.title : config.title %></title>
     <!-- styles -->
-    <%- css('lib/font-awesome/css/font-awesome.min') %>
+    <%- css('https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css') %>
     <%- css('lib/meslo-LG/styles') %>
-    <%- css('lib/justified-gallery/justifiedGallery.min.css') %>
+    <%- css('https://cdn.bootcss.com/justifiedGallery/3.6.1/css/justifiedGallery.min.css') %>
     <%- css('css/style') %>
     <!-- rss -->
     <% if (theme.rss === '' && config.feed && config.feed.path) { %>
@@ -49,6 +49,4 @@
     <% if (theme.rss) { %>
       <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
     <% } %>
-    <!-- jquery -->
-    <%- js('lib/jquery/jquery.min') %>
 </head>
