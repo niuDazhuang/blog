@@ -50,7 +50,7 @@ env:
     GH_HOME: niuDazhuang/niudazhuang.github.io.git
 ```
 
-### _config.yml
+## _config.yml
 
 ```
 deploy:
