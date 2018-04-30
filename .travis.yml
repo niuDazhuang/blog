@@ -7,8 +7,9 @@ branchs:
 install:
 - npm i
 script:
+- hexo g
 - chmod 600 ~/.ssh/id_rsa
-- tar zcvf blog.tar.gz public
+- mv public blog && tar zcvf blog.tar.gz blog
 addons:
   ssh_known_hosts:
   - 101.132.193.88
@@ -18,6 +19,6 @@ before_install:
 - git config --global user.name niuDazhuang
 - git config --global user.email dengwm666@icloud.com
 after_success:
-- hexo g -d
+- hexo d
 - scp blog.tar.gz root@101.132.193.88:/www
 - ssh root@101.132.193.88 -o StrictHostKeyChecking=no 'cd /www && tar zxvf blog.tar.gz'
