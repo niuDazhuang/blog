@@ -10,8 +10,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - git config --global user.name niuDazhuang
 - git config --global user.email dengwm666@icloud.com
-- sed -i'' "s~git@github.com:niuDazhuang/niudazhuang.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/niudazhuang/niudazhuang.github.io.git~"
-  _config.yml
+- sed -i'' "s~git@github.com:${GH_HOME}~https://${GH_TOKEN}:x-oauth-basic@github.com/${GH_HOME}~" _config.yml
 install:
 - npm i
 script:
@@ -23,3 +22,6 @@ addons:
 after_success:
 - scp blog.tar.gz root@101.132.193.88:/www
 - ssh root@101.132.193.88 -o StrictHostKeyChecking=no 'cd /www && tar zxvf blog.tar.gz'
+env:
+  global:
+    GH_HOME: niuDazhuang/niudazhuang.github.io.git
