@@ -1,11 +1,9 @@
 language: node_js
 node_js:
 - '8'
-
 branchs:
   only:
   - master
-
 before_install:
 - git clone https://github.com/tzvetkov75/solar-theme-hexo.git themes/solar
 - openssl aes-256-cbc -K $encrypted_684ac9f60d62_key -iv $encrypted_684ac9f60d62_iv
@@ -13,19 +11,19 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - git config --global user.name niuDazhuang
 - git config --global user.email dengwm666@icloud.com
-- sed -i'' "s~git@github.com:niuDazhuang/niudazhuang.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/niudazhuang/niudazhuang.github.io.git~" _config.yml
-
+- sed -i'' "s~git@github.com:niuDazhuang/niudazhuang.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com/niudazhuang/niudazhuang.github.io.git~"
+  _config.yml
 install:
 - npm i
-
 script:
 - hexo g -d
 - mv public blog && tar zcvf blog.tar.gz blog
-
 addons:
   ssh_known_hosts:
   - 101.132.193.88
-
 after_success:
 - scp blog.tar.gz root@101.132.193.88:/www
 - ssh root@101.132.193.88 -o StrictHostKeyChecking=no 'cd /www && tar zxvf blog.tar.gz'
+env:
+  global:
+    secure: kMPR/26TdsbMRlDf7leWzCSL0U+LlnoQj+0B1wgMtzry4uMMpCPuGPJOeKnBv+hYvt33WUiHmK7Qyy7j9jeBP63OPxWeCIuwFxk8QRcbf/5xJwLJtEL0ImPNoRzHppnE07o41KbJ8BOHt1nDXwypryYvbMOL6TQjtF1DUZT/+mkXARolswLooNS0MGErx7xZas62ROjK4CDYL1SV/RR5f6IRQNZNAs/uL8Kl9VQJrPMacDDRiVbV581Y9DVwfZctYHVdEUUczLOmpuSBfHDLBvdVoDHIvoGN+ZBtkXkhMEjrq1tLAFx1P38qEN/fXaEwiwRX7t9j6cL4JP9pzzvTMOE39hQAXML1wBS8mEVetNdZsXlk9qvUx7J0Dg9Xfk4IJdFaBEOk6RhzRIPw7DSE5fOXvhVQg7djq28zQQ1J91fkl1MBxI49CJh+lwMI8p1E6LQReIWH8Q0gxfDPgpt2scueYZ0TgvDYX8OGFfsb5rXkfllxOHIjui1nzTQ7ihfwrPCR8PPgnU7OVGCr/nTXfUbMYXvwU9/vClgyXKiukuhTIMWKdhFZu0LKX64iHdZRsUNkNauF1vDIG1F1BEbnlY1xV3jytO3k95VdFeEGWbHGzO/+U6nVWrCIjRep+YLx0sIrqQgv+4FPm6z1Kqg5gLXXIUBZYZfswxqor9f1RAA=
