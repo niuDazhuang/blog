@@ -1,24 +1,33 @@
 language: node_js
 node_js:
 - '8'
+
 branchs:
   only:
   - master
+
+before_install:
+- git clone https://github.com/tzvetkov75/solar-theme-hexo.git themes/solar
+- openssl aes-256-cbc -K $encrypted_684ac9f60d62_key -iv $encrypted_684ac9f60d62_iv
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+- git config --global user.name niuDazhuang
+- git config --global user.email dengwm666@icloud.com
+
 install:
 - npm i
+
 script:
-- hexo g
-- chmod 600 ~/.ssh/id_rsa
+- hexo g -d
 - mv public blog && tar zcvf blog.tar.gz blog
+
 addons:
   ssh_known_hosts:
   - 101.132.193.88
-before_install:
-- openssl aes-256-cbc -K $encrypted_684ac9f60d62_key -iv $encrypted_684ac9f60d62_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
-- git config --global user.name niuDazhuang
-- git config --global user.email dengwm666@icloud.com
+
 after_success:
-- hexo d
 - scp blog.tar.gz root@101.132.193.88:/www
 - ssh root@101.132.193.88 -o StrictHostKeyChecking=no 'cd /www && tar zxvf blog.tar.gz'
