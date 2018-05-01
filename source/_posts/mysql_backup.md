@@ -1,7 +1,7 @@
 ---
 title: mysql_backup
 date: 2018-05-01 23:14:57
-tags: [linux, shell, mysql]
+tags: [linux, sh, mysql]
 ---
 
 ## mysql_backup
@@ -23,7 +23,7 @@ fi
 
 if [ ! -d $BAK_DIR ];then
     mkdir -p $BAK_DIR
-    echo "\033[32m创建目录： $BAK_DIR\033[0m"
+    echo -e "\033[32m创建目录： $BAK_DIR\033[0m"
 else
     echo "已存在: $BAK_DIR"
 fi
@@ -31,8 +31,8 @@ fi
 $SQLCMD -u$SQLUR -p$SQLPW -d $SQLDB >$BAK_DIR/$SQLDB.sql
 
 if [ $? -eq 0 ];then
-    echo "\033[32m备份成功\033[0m"
+    echo -e "\033[32m备份成功\033[0m"
 else
-    echo "\033[41m备份失败\033[0m"
+    echo -e "\033[41m备份失败\033[0m"
 fi
 ```
