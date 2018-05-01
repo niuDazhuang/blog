@@ -1,7 +1,7 @@
 ---
 title: svn
 date: 2018-04-30 14:58:20
-tags: [ops, svn]
+tags: [shell, svn]
 ---
 ## centos
 ```

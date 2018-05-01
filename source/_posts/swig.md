@@ -1,7 +1,7 @@
 ---
 title: swig
 date: 2018-04-30 19:37:17
-tags: tpl
+tags: [tpl]
 ---
 
 ## swig的安装

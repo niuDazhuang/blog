@@ -1,7 +1,7 @@
 ---
 title: nginx
 date: 2018-04-30 20:11:53
-tags: [linux, ops]
+tags: [linux, shell, nginx]
 ---
 
 ## install

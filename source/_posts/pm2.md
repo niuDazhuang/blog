@@ -1,7 +1,7 @@
 ---
 title: pm2
 date: 2018-04-30 20:16:58
-tags: [linux, node]
+tags: [linux, shell, node]
 ---
 ## install
 ```

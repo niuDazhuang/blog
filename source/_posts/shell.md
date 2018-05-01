@@ -1,7 +1,7 @@
 ---
 title: shell
 date: 2018-04-30 14:42:13
-tags: [linux, ops]
+tags: [linux, shell]
 ---
 ## 备忘
 ```bash

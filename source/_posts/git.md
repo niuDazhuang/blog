@@ -1,7 +1,7 @@
 ---
 title: git
 date: 2018-04-30 20:20:46
-tags: [ops, git]
+tags: [shell, git]
 ---
 
 ## 提交
