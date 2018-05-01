@@ -42,6 +42,9 @@ $ tar jxvf {name}.tar.bz2
 
 # 查看磁盘空间
 $ df -h
+
+# grep是过滤带#号的行 - 过滤以；号为开头的行 - 过滤掉所有的空行
+$ cat smb.conf | grep -v "#" | grep -v "^;" | grep -v "^$"
 ```
 
 ## .sh

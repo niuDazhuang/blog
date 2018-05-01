@@ -1,7 +1,6 @@
 nav:
   Home: /
-  About: /
-  archives: /archives/
+  Archives: /archives/
   Projects: http://github.com/niuDazhuang
 
 projects_url: http://github.com/niuDazhuang
