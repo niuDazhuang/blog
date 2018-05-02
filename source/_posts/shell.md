@@ -45,6 +45,9 @@ $ df -h
 
 # grep是过滤带#号的行 - 过滤以；号为开头的行 - 过滤掉所有的空行
 $ cat smb.conf | grep -v "#" | grep -v "^;" | grep -v "^$"
+
+# 查看命令所在目录
+$ which sinopia
 ```
 
 ## .sh
@@ -145,6 +148,39 @@ $ echo `bc << EOF
 > EOF
 > `
 ```
+
+### 文件比较运算符
+
+```
+-e filename 	存在
+-d filename 	为目录
+-f filename 	为常规文件
+-L filename 	为符号链接
+-r filename 	可读
+-w filename 	可写
+-x filename 	可执行
+```
+
+### 字符串比较运算符
+
+```
+-z string           长度为零，则为真 	[ -z "$myvar" ]
+-n string           长度非零，则为真 	[ -n "$myvar" ]
+string1 = string2    string1与 string2相同，则为真 	[ "$myvar" = "one two three" ]
+string1! = string2 	string1与 string2不同，则为真 	[ "$myvar" != "one two three" ]
+```
+
+### 算术比较运算符
+
+```
+num1 -eq num2 	等于	[ 3 -eq $mynum ]
+num1 -ne num2 	不等于	[ 3 -ne $mynum ]
+num1 -lt num2 	小于	[ 3 -lt $mynum ]
+num1 -le num2 	小于或等于	[ 3 -le $mynum ]
+num1 -gt num2 	大于	[ 3 -gt $mynum ]
+num1 -ge num2 	大于或等于	[ 3 -ge $mynum ]
+```
+
 
 ## if判断
 ```
