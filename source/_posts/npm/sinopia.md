@@ -5,6 +5,8 @@ tags: [node, npm]
 ---
 ## info
 
+- windows
+- [github](https://github.com/rlidwka/sinopia)
 - 已停止维护, 请使用 [verdaccio](https://github.com/verdaccio/verdaccio)
 
 ## install
