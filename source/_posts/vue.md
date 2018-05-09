@@ -23,28 +23,37 @@ watch: {
 
 ## 3_key
 
-```
+```tpl
 <router-view :key="$route.fullpath"></router-view>
 ```
 
 ## 4_render
 
+- babel-plugin-transform-vue-jsx
+
 ```js
-functional: true,
-render(h, { props }) {
-  return props.routes.map(route =>
-    <li key={route.name}>
-      <router-link to={route}>
-        {route.title}
-      </router-link>
-    </li>
-  )
+{
+  methods: {
+    showNotify() {
+      const h = this.$createElement
+​
+      this.$notify({
+        title: 'GitHub',
+        message: (
+          <div>
+            <p>[GitHub] Subscribed to ElemeFE/element notification</p>
+            <el-button>已读<el-button>
+          <div>
+        )
+      })
+    }
+  }
 }
 ```
 
 ## 5_inset
 
-```
+```vue
 
 <input
   :value="value"
