@@ -18,6 +18,7 @@ $ travis encrypt-file ~/.ssh/id_rsa --add
 # git 采用token 或者在 www.travis-ci.org 配置 GH_TOKEN
 $ travis encrypt 'GH_TOKEN=<GIT_TOKEN>' --add
 ```
+- more: https://docs.travis-ci.com/user/deployment/
 
 ## .travis.yml
 ```
