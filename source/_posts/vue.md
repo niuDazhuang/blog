@@ -31,7 +31,7 @@ watch: {
 
 - babel-plugin-transform-vue-jsx
 
-```js
+```
 {
   methods: {
     showNotify() {

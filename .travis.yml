@@ -10,7 +10,6 @@ before_install:
 - git config --global user.name niuDazhuang
 - git config --global user.email dengwm666@icloud.com
 - sed -i'' "s~git_repository_will_be_replaced~https://${GH_TOKEN}:x-oauth-basic@github.com/${GH_HOME}~" _config.yml
-- cat _config.yml
 install:
 - npm i
 script:
