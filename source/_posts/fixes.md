@@ -13,3 +13,11 @@ tags: [fix]
 - npm config set python "E:\Python27\python.exe"
 - 注意反斜杠
 ```
+
+## yum
+- yum 源下找不到需要安装的软件包
+
+```bash
+$ yum install epel-release
+$ yum update
+```
