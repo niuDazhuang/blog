@@ -7,7 +7,7 @@ projects_url: http://github.com/niuDazhuang
 
 customize:
     gravatar:
-        email: 
+        email: 18675523056@163.com
     logo:
         enabled: true
         width: 50
@@ -27,9 +27,7 @@ customize:
         gravator: false
     social_links:
         github: https://github.com/niuDazhuang
-        twitter: /
-        facebook: /
-        linkedin: /
+        qq: https://user.qzone.qq.com/206165510
     post_count: 5
     highlight: lightcode
 
