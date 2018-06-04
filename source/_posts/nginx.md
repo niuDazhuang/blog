@@ -1,5 +1,5 @@
 ---
-title: nginx
+title: nginx相关命令速查
 date: 2018-04-30 20:11:53
 tags: [linux, shell, nginx]
 ---

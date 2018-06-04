@@ -1,5 +1,5 @@
 ---
-title: shell_color
+title: shell颜色相关速查
 date: 2018-05-02 00:10:26
 tags: [linux, shell]
 ---

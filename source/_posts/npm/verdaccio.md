@@ -1,5 +1,5 @@
 ---
-title: verdaccio
+title: verdaccio部署本地npm仓库
 date: 2018-05-03 15:31:40
 tags: [node, npm]
 ---

@@ -1,5 +1,5 @@
 ---
-title: sinopia
+title: sinopia部署本地npm仓库
 date: 2018-05-02 09:48:46
 tags: [node, npm]
 ---

@@ -1,5 +1,5 @@
 ---
-title: yohoo 35 rules
+title: 雅虎军规
 date: 2018-05-04 09:18:32
 tags: [performance optimization]
 ---

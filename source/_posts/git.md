@@ -1,5 +1,5 @@
 ---
-title: git
+title: git命令速查
 date: 2018-04-30 20:20:46
 tags: [shell, git]
 ---

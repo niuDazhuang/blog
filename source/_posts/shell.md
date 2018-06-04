@@ -1,5 +1,5 @@
 ---
-title: shell
+title: shell学习笔记
 date: 2018-04-30 14:42:13
 tags: [linux, shell]
 ---

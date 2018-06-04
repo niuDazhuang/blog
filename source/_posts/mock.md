@@ -1,5 +1,5 @@
 ---
-title: mock
+title: mock数据相关js库
 date: 2018-04-30 20:35:52
 tags: [node, npm, mock]
 ---

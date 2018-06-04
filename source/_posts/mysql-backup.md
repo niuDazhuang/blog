@@ -1,5 +1,5 @@
 ---
-title: mysql_backup
+title: 数据库备份shell
 date: 2018-05-01 23:14:57
 tags: [linux, sh, mysql]
 ---

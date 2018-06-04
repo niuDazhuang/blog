@@ -1,5 +1,5 @@
 ---
-title: vue
+title: vue最佳实践
 date: 2018-05-09 09:45:01
 tags: [vue, skills]
 ---

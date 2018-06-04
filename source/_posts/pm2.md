@@ -1,5 +1,5 @@
 ---
-title: pm2
+title: pm2命令速查
 date: 2018-04-30 20:16:58
 tags: [linux, shell, node]
 ---
