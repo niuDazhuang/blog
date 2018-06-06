@@ -37,3 +37,37 @@ void fn (int n, char A, char B, char C)
     return;
 }
 ```
+
+## 斐波那契
+
+```js
+/**
+1 1 2 3 5 8 13 ...
+*/
+
+const fq = (pre, next, n) => n === 0 ? pre : fq(next, pre + next, --n)
+const getFbnq = curry(fq)(1, 1)
+```
+
+## 杨辉三角
+
+```js
+/**
+1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1
+1 5 10 10 5 1
+...
+*/
+
+const point = (row, col) => (col === 0 || row === col)
+    ? 1
+    : (point(row - 1, col - 1) + point(row - 1, col))
+
+const getYH = n => Array.apply(null, {length: n})
+    .map((v, i) => Array.apply(null, {length: i + 1}))
+    .map((row, i) => row.map((v, j) => point(i, j)))
+
+```
