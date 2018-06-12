@@ -19,6 +19,8 @@ $ netstat -pntl
 
 # 查看pid并找出路径
 $ ps -ef
+# mac
+$ lsof -i tcp:{port}
 
 # tar 打包/解包
 $ tar czvf {name}.tar {dirname}
