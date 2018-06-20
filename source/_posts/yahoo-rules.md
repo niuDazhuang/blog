@@ -16,34 +16,26 @@ tags: [performance optimization]
 - 9. 尽量少用iframe
 - 10. 杜绝404
 
-## css
+## js/css
 - 11. 避免使用CSS表达式
 - 12. 选择link舍弃@import
 - 13. 避免使用滤镜
 - 14. 把样式表放在顶部
-
-## js
 - 15. 去除重复脚本
 - 16. 尽量减少DOM访问
 - 17. 事件代理
 - 18. 把脚本放在底部
-
-## javascript, css 
 - 19. 分离成单独文件
 - 20. 压缩
 
-## image
+## source
 - 21. 优化图片
 - 22. 优化CSS Sprite
 - 23. 不缩放
 - 24. 避免图片src属性为空
 - 25. 用小的可缓存的favicon.ico
-
-## cookie
 - 26. 给Cookie减肥
 - 27. 把组件放在不含cookie的域下
-
-## mobile
 - 28. 保证所有组件都小于25K
 - 29. 把组件打包到一个复合文档里
 
