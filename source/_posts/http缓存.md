@@ -23,5 +23,10 @@ tags: [http, cache]
 - Etag / If-None-Match
 - Last-Modified  /  If-Modified-Since
 
+## last-modified 缺陷
+
+- 秒级别的时间戳，秒内频繁更新内容无效
+- 文件时间戳改动但内容不一定改动
+
 ## 流程图
 ![http-cache-image](https://raw.githubusercontent.com/niuDazhuang/niudazhuang.github.io/master/images/http-cache.png)
