@@ -79,3 +79,34 @@ const b = a.toFixed(2) // string "12.34"
 const c = round(a, 2)  // number 12.34
 
 ```
+
+## 防抖
+
+```js
+// 频繁操作只有最后一次会执行
+const debounce = (fn, wait, context) => {
+  return (...args) => {
+    clearTimeout(fn.id);
+    fn.id = setTimeout(() => {
+      fn.apply(context, args)
+    }, wait);
+  }
+}
+```
+
+## 节流
+
+```js
+// 单位时间内执行一次
+const throttle = (fn, delay, context) => {
+  let timer = null
+  return (...args) => {
+    if (!timer) {
+      timer = setTimeout(() => {
+        fn.apply(context, args)
+        timer = null
+      }, delay)
+    }
+  }
+}
+```
