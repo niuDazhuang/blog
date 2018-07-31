@@ -43,8 +43,8 @@ UI rendering
 
 ```
 - timers          // setTimeout,setInterval
-- I/O callback    // 执行除了close事件，定时器，setImmediate外的回调
 - idle, prepare   // process.nextTick
+- I/O callback    // 执行除了close事件，定时器，setImmediate外的回调
 - poll            // 发现setImmediate则进入check阶段
 - check           // setImmediate
 - close callback  // 执行close事件
