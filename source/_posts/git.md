@@ -7,7 +7,7 @@ tags: [shell, git]
 ## 提交
 
 ```
-$ git add 日记.txt                          -- 添加本地文件，全部：.
+$ git add 日记.txt                           -- 添加本地文件，全部：.
 
 $ git commit -m "Test chanage message"      -- 提交更改,附加信息 
 
@@ -51,6 +51,8 @@ $ git merge (branchname)                    -- 合并分支到当前分支
 $ git log                                   -- 显示一个分支中提交的更改记录
 
 $ git log --oneline                         -- 显示一个分支中提交的更改记录简洁版本
+
+$ git log --pretty=oneline                  -- 显示一个分支中提交的更改记录简洁版本 完整hash值
 
 $ git log --graph                           -- 显示分支合并的历史拓扑图
 ```
