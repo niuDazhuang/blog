@@ -18,10 +18,10 @@ script:
 - mv public blog && tar zcvf blog.tar.gz blog
 addons:
   ssh_known_hosts:
-  - 101.132.193.88
+  - $HOST
 after_success:
-- scp blog.tar.gz root@101.132.193.88:/www
-- ssh root@101.132.193.88 -o StrictHostKeyChecking=no 'cd /www && tar zxvf blog.tar.gz'
+- scp blog.tar.gz root@$HOST:/www
+- ssh root@$HOST -o StrictHostKeyChecking=no 'cd /www && tar zxvf blog.tar.gz'
 env:
   global:
     GH_HOME: niuDazhuang/niudazhuang.github.io.git
