@@ -96,5 +96,6 @@ CSS 层面的优化
 《JavaScript高级程序设计》 
 《高性能JavaScript》
 《编写可维护的JavaScript》
+《webkit技术内幕》
 
 技术开发挑战赛复盘
