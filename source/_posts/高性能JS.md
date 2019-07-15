@@ -116,7 +116,13 @@ onmessage = function (e) {
 《webkit技术内幕》
 
 技术开发挑战赛复盘
-
+```
+标记         名称             描述                                                 例子
+O(1)         常数        不管有多少值，执行的时间都是恒定的                        获取简单值和存储在变量中的值
+O(log n)     对数        总执行时间和值的数量相关，但是完成算法不一定要获取每个值    二分查找
+O(n)         线性        总执行时间和值的数量直接相关                             遍历数组中所有元素
+O(n²)        平方        总执行时间和值的数量相关，每个值至少获取n次               插入排序
+```
 ```js
 function add (num1, num2) {
 	var sum = num1 + num2
@@ -126,18 +132,20 @@ var total = add(5, 10)
 ```
 
 ```js
-function initUI () {
-	var bd = document.body
-	var links = document.getElementsByTagName('a')
-	var i = 0
-	var len = links.length
-	while (i < len) {
-		update(links[i++])
+function initUI(){
+	with (document) { //avoid!
+		var bd = body,
+		links = getElementsByTagName_r('a'),
+		i = 0,
+		len = links.length
+		while (i < len) {
+			update(links[i++])
+		}
+		getElementById('go-btn').onclick = function () {
+			start()
+		}
+		bd.className = 'active'
 	}
-	document.getElementById('go-btn').onclick = function () {
-		start()
-	}
-	bd.className = 'active'
 }
 ```
 
